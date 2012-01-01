@@ -1,6 +1,6 @@
 = switchblade
 
-Description goes here.
+A workflow where the git repository doesn't go out of sync with what Chef has.
 
 == Contributing to switchblade
  
