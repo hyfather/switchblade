@@ -5,12 +5,12 @@
 
 Gem::Specification.new do |s|
   s.name = "switchblade"
-  s.version = ""
+  s.version = "0.0.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Nikhil Mungel"]
   s.date = "2012-01-01"
-  s.description = "TODO: longer description of your gem"
+  s.description = "A workflow where the git repository doesn't go out of sync with what Chef has."
   s.email = "mail@hyfather.com"
   s.extra_rdoc_files = [
     "LICENSE.txt",
@@ -23,7 +23,9 @@ Gem::Specification.new do |s|
     "LICENSE.txt",
     "README.rdoc",
     "Rakefile",
+    "VERSION",
     "lib/switchblade.rb",
+    "switchblade.gemspec",
     "test/helper.rb",
     "test/test_switchblade.rb"
   ]
@@ -31,7 +33,7 @@ Gem::Specification.new do |s|
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
   s.rubygems_version = "1.8.10"
-  s.summary = "TODO: one-line summary of your gem"
+  s.summary = "A workflow where the git repository doesn't go out of sync with what Chef has."
 
   if s.respond_to? :specification_version then
     s.specification_version = 3

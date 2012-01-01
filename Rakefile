@@ -17,8 +17,8 @@ Jeweler::Tasks.new do |gem|
   gem.name = "switchblade"
   gem.homepage = "http://github.com/hyfather/switchblade"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{A workflow where the git repository doesn't go out of sync with what Chef has.}
+  gem.description = %Q{A workflow where the git repository doesn't go out of sync with what Chef has.}
   gem.email = "mail@hyfather.com"
   gem.authors = ["Nikhil Mungel"]
   # dependencies defined in Gemfile
