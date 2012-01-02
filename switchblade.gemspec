@@ -27,6 +27,7 @@ Gem::Specification.new do |s|
     "lib/switchblade/cli.rb",
     "lib/switchblade.rb",
     "switchblade.gemspec",
+    "bin/sb",
     "test/helper.rb",
     "test/test_switchblade.rb"
   ]
@@ -36,6 +37,7 @@ Gem::Specification.new do |s|
   s.rubygems_version = "1.8.10"
   s.summary = "A workflow where the git repository doesn't go out of sync with what Chef has."
 
+  s.executables << 'sb'
   if s.respond_to? :specification_version then
     s.specification_version = 3
 

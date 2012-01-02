@@ -1,8 +1,12 @@
 module SwitchBlade
 class CLI
-  def self.parse(vector)
-    vector.map!(&:downcase)
-    commands_map = {
+  attr_accessor :given_vector
+  attr_accessor :available_vector
+
+  def self.parse(argv)
+    instance = self.new
+    instance.given_vector = argv.map!(&:downcase)
+    instance.available_vector = {
       'help' => :print_usage,
       'version' => :print_version,
       'work' => :work,
@@ -11,9 +15,20 @@ class CLI
       'compare' => :compare,
       'status' => :print_status
     }
-    commands_map.default = :error
-    self.new.send(commands_map[vector[0]])
+    instance.available_vector.default = :error
+    instance.run
   end
+
+  def run
+    self.send(available_vector[given_vector.first])
+  end
+
+  def work
+    puts "Error" and return if given_vector.length > 2
+    
+  end
+
+
 
   def print_version
     puts "alpha 0.1"
@@ -36,13 +51,13 @@ class CLI
 
 
   def print_usage(retval=0)
-    puts "Usage --"
-    puts "Before starting work on a cookbook, ensure that you have no local changes in your git repository."
-    puts "You can do by running `git status`. If you wipe off all your local changes and reset your repository,"
-    puts "running `rake reset` will cause sb to wipe off all local changes and pull from the origin remote.\n"
-    puts "`rake work cookbook_name` -- When you are ready to work on a cookbook, sb will move you to a git branch for the cookbook."
-    puts "`rake stage cookbook_name`"
+    puts "Usage: sb sub-command (options)\n\n"
+    puts "Available Sub Commands"
+    puts "1. sb work cookbook_name"
     exit retval if retval >= 0
   end
+
+  
+
 end
 end

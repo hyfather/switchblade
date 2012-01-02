@@ -9,7 +9,6 @@ class SBConfig
 end
 SBConfig.from_file('SBFile')
 
-
 def no_subcommand_given?
   ARGV[0] =~ /^-/
 end
@@ -19,8 +18,6 @@ def no_command_given?
 end
 
 SwitchBlade::CLI.parse(ARGV)
-
-#Commands.new.send(commands_map[ARGV[0]])
 
 
 
