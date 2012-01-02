@@ -1,0 +1,41 @@
+#!/usr/bin/env ruby
+
+require 'mixlib/cli'
+require 'mixlib/config'
+require 'switchblade'
+
+class SBConfig
+  extend Mixlib::Config
+end
+SBConfig.from_file('SBFile')
+
+
+def no_subcommand_given?
+  ARGV[0] =~ /^-/
+end
+
+def no_command_given?
+  ARGV.empty?
+end
+
+SwitchBlade::CLI.parse(ARGV)
+
+#Commands.new.send(commands_map[ARGV[0]])
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

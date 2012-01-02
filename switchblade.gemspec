@@ -24,6 +24,7 @@ Gem::Specification.new do |s|
     "README.rdoc",
     "Rakefile",
     "VERSION",
+    "lib/switchblade/cli.rb",
     "lib/switchblade.rb",
     "switchblade.gemspec",
     "test/helper.rb",
